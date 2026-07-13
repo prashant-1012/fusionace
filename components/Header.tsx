@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import HashLink from "./HashLink";
 import Logo from "./Logo";
@@ -51,6 +52,16 @@ export default function Header() {
 
   const solid = !isHome || scrolled || menuOpen;
 
+  const handleLogoClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isHome) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      if (window.location.hash) {
+        window.history.replaceState(null, "", "/");
+      }
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 z-50 w-full transition-colors duration-300 ${
@@ -58,9 +69,9 @@ export default function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-8">
-        <HashLink href="/#home" className="shrink-0">
+        <Link href="/" onClick={handleLogoClick} className="shrink-0">
           <Logo variant="light" />
-        </HashLink>
+        </Link>
 
         <nav className="hidden items-center gap-10 md:flex">
           {NAV_LINKS.map((link) => (
