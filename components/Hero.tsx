@@ -33,7 +33,7 @@ export default function Hero() {
           </p>
           <HashLink
             href="/#enquire"
-            className="mt-8 inline-block rounded-full bg-gold px-8 py-3.5 font-sans text-sm font-semibold text-ink transition-colors hover:bg-gold-dark"
+            className="mt-8 inline-block rounded-full bg-gold px-8 py-3.5 font-sans text-sm font-semibold text-white transition-colors hover:bg-gold-dark"
           >
             Enquire Now
           </HashLink>

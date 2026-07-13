@@ -89,7 +89,7 @@ export default function Header() {
 
         <HashLink
           href="/#enquire"
-          className="hidden rounded-full bg-gold px-6 py-2.5 font-sans text-sm font-semibold text-ink transition-colors hover:bg-gold-dark md:inline-block"
+          className="hidden rounded-full bg-gold px-6 py-2.5 font-sans text-sm font-semibold text-white transition-colors hover:bg-gold-dark md:inline-block"
         >
           Contact us
         </HashLink>
@@ -122,7 +122,7 @@ export default function Header() {
             <HashLink
               href="/#enquire"
               onClick={() => setMenuOpen(false)}
-              className="mt-2 rounded-full bg-gold px-6 py-2.5 text-center font-sans text-sm font-semibold text-ink hover:bg-gold-dark"
+              className="mt-2 rounded-full bg-gold px-6 py-2.5 text-center font-sans text-sm font-semibold text-white hover:bg-gold-dark"
             >
               Contact us
             </HashLink>

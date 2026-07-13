@@ -163,7 +163,7 @@ export default function LeadForm() {
 
       <button
         type="submit"
-        className="mt-2 w-full rounded-full bg-gold px-6 py-3 font-sans text-sm font-semibold text-ink transition-colors hover:bg-gold-dark"
+        className="mt-2 w-full rounded-full bg-gold px-6 py-3 font-sans text-sm font-semibold text-white transition-colors hover:bg-gold-dark"
       >
         Enquire Now
       </button>
