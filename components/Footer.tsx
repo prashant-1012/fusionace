@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Phone, MapPin, ShieldCheck } from "lucide-react";
+import { Mail, Phone, MapPin, ShieldCheck } from "lucide-react";
 import HashLink from "./HashLink";
 import Logo from "./Logo";
 
@@ -27,6 +27,13 @@ export default function Footer() {
             >
               <Phone size={16} />
               +91-8446350402
+            </a>
+            <a
+              href="mailto:hello@fusionace.in"
+              className="mt-2 flex items-center gap-2 font-sans text-sm text-cream/80 hover:text-gold"
+            >
+              <Mail size={16} />
+              hello@fusionace.in
             </a>
           </div>
 
