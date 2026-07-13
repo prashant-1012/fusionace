@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import HashLink from "./HashLink";
 import Logo from "./Logo";
@@ -13,6 +14,8 @@ const NAV_LINKS = [
 ];
 
 export default function Header() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeId, setActiveId] = useState<string | null>(null);
@@ -46,7 +49,7 @@ export default function Header() {
     return () => observer.disconnect();
   }, []);
 
-  const solid = scrolled || menuOpen;
+  const solid = !isHome || scrolled || menuOpen;
 
   return (
     <header
