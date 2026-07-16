@@ -21,11 +21,11 @@ Founder: **Nayeem Munaf Kazi**.
 
 ## Key business/compliance details (from source doc)
 
-- **MahaRERA registration:** doc literally states "Need to confirm" — number not yet available. Per user decision (2026-07-13), footer shows a placeholder ("To be updated") rather than a fake number, with a link to https://maharera.maharashtra.gov.in kept live.
+- **MahaRERA registration:** confirmed 2026-07-16 as **A51700015804**. Footer compliance block now reads "For Authorized Real Estate Channel Partner / MahaRERA Reg. No: A51700015804", with a link to https://maharera.maharashtra.gov.in kept live.
 - **GST Address:** 2nd Floor, E - Ward Survey No. 143/A-3/15, Dayna Homes, Plot No. 09, Akshay Park, Tal Karvir, Nagalapark, Kolhapur, Maharashtra, 416003
 - **Phone:** +91-8446350402
-- **Disclaimer (footer, must appear verbatim):** "All project information, including images and brochures, are for informational purposes only. Fusion Ace acts as a consultant and does not provide any warranties on behalf of the developer."
-- Positioned as "Authorized Real Estate Channel Partner."
+- **Disclaimer (footer, must appear verbatim, updated 2026-07-16):** "All project information, including images and brochures, are for informational purposes only. Fusion Ace acts as a marketing partner for authorized real estate channel partner, MahaRERA Reg. No: A51700015804."
+- Positioned as "Authorized Marketing Partner" (updated 2026-07-16, was previously "Authorized Real Estate Channel Partner").
 
 ## Known open items / decisions made with user
 

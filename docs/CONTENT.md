@@ -81,8 +81,8 @@ Section heading: **Meet Your Consultant**
 ## Footer
 
 - Logo: **Fusion Ace** (text wordmark, same as header)
-- `Authorized Real Estate Channel Partner`
-- `MahaRERA Reg. No: **[TODO — doc says "Need to confirm"]**`
+- `Authorized Marketing Partner`
+- Compliance block: `For Authorized Real Estate Channel Partner` / `MahaRERA Reg. No: A51700015804`
 - MahaRERA link: https://maharera.maharashtra.gov.in
 - GST Address: `2nd Floor, E - Ward Survey No. 143/A-3/15, Dayna Homes, Plot No. 09, Akshay Park, Tal Karvir, Nagalapark, Kolhapur, Maharashtra, 416003`
 - Phone: `+91-8446350402`
@@ -90,7 +90,7 @@ Section heading: **Meet Your Consultant**
 - Links: `Privacy Policy` | `Terms & Conditions` (placeholder pages)
 
 **Disclaimer:**
-> All project information, including images and brochures, are for informational purposes only. Fusion Ace acts as a consultant and does not provide any warranties on behalf of the developer.
+> All project information, including images and brochures, are for informational purposes only. Fusion Ace acts as a marketing partner for authorized real estate channel partner, MahaRERA Reg. No: A51700015804.
 
 ---
 

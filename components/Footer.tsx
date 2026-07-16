@@ -19,7 +19,7 @@ export default function Footer() {
             <Logo variant="light" />
             <p className="mt-4 flex items-center gap-2 font-sans text-sm font-medium text-gold">
               <ShieldCheck size={16} />
-              Authorized Real Estate Channel Partner
+              Authorized Marketing Partner
             </p>
             <a
               href="tel:+918446350402"
@@ -42,8 +42,10 @@ export default function Footer() {
               Compliance
             </h4>
             <p className="mt-4 font-sans text-sm text-cream/80">
+              For Authorized Real Estate Channel Partner
+              <br />
               MahaRERA Reg. No:{" "}
-              <span className="text-cream/60">To be updated</span>
+              <span className="text-cream/60">A51700015804</span>
               <br />
               <a
                 href="https://maharera.maharashtra.gov.in"
@@ -105,8 +107,8 @@ export default function Footer() {
         <p className="mt-6 border-t border-cream/10 pt-6 font-sans text-xs leading-relaxed text-cream/40">
           Disclaimer: All project information, including images and
           brochures, are for informational purposes only. Fusion Ace acts as
-          a consultant and does not provide any warranties on behalf of the
-          developer.
+          a marketing partner for authorized real estate channel partner,
+          MahaRERA Reg. No: A51700015804.
         </p>
       </div>
     </footer>
