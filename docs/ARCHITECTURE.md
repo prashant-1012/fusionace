@@ -6,7 +6,7 @@
 - **Tailwind CSS v4** (`@tailwindcss/postcss`, CSS-first config via `@theme` in `app/globals.css` — no `tailwind.config.ts` needed in v4).
 - **lucide-react** for icons.
 - **next/font** (Google Fonts, self-hosted at build time) for typography.
-- No backend yet — lead form submit handler is stubbed client-side (see Hero/LeadForm section of PROGRESS.md).
+- **nodemailer** for the lead form's mail-sending backend (`app/api/enquire/route.ts`, SMTP via Hostinger — see PROGRESS.md).
 
 ## Folder structure
 

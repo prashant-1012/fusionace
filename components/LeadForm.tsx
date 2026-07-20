@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { User, Mail, Phone, MapPin, CheckCircle2 } from "lucide-react";
+import { User, Mail, Phone, MapPin, CheckCircle2, AlertCircle } from "lucide-react";
 
 type FormState = {
   name: string;
@@ -52,6 +52,8 @@ export default function LeadForm() {
   const [values, setValues] = useState<FormState>(INITIAL_STATE);
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleChange =
     (field: keyof FormState) =>
@@ -59,7 +61,7 @@ export default function LeadForm() {
       setValues((prev) => ({ ...prev, [field]: e.target.value }));
     };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const validationErrors = validate(values);
     setErrors(validationErrors);
@@ -68,12 +70,30 @@ export default function LeadForm() {
       return;
     }
 
-    // TODO: wire this up to a backend/CRM endpoint once one exists.
-    // For now we just confirm receipt to the user client-side.
-    console.log("Lead form submitted:", values);
+    setSubmitting(true);
+    setSubmitError(null);
 
-    setSubmitted(true);
-    setValues(INITIAL_STATE);
+    try {
+      const res = await fetch("/api/enquire", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(values),
+      });
+
+      if (!res.ok) {
+        const data = await res.json().catch(() => null);
+        throw new Error(data?.error ?? "Something went wrong. Please try again.");
+      }
+
+      setSubmitted(true);
+      setValues(INITIAL_STATE);
+    } catch (err) {
+      setSubmitError(
+        err instanceof Error ? err.message : "Something went wrong. Please try again.",
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   if (submitted) {
@@ -161,11 +181,19 @@ export default function LeadForm() {
         autoComplete="off"
       />
 
+      {submitError && (
+        <p className="flex items-center gap-2 font-sans text-sm text-red-600">
+          <AlertCircle size={16} className="shrink-0" />
+          {submitError}
+        </p>
+      )}
+
       <button
         type="submit"
-        className="mt-2 w-full rounded-full bg-gold px-6 py-3 font-sans text-sm font-semibold text-white transition-colors hover:bg-gold-dark"
+        disabled={submitting}
+        className="mt-2 w-full rounded-full bg-gold px-6 py-3 font-sans text-sm font-semibold text-white transition-colors hover:bg-gold-dark disabled:cursor-not-allowed disabled:opacity-60"
       >
-        Enquire Now
+        {submitting ? "Sending..." : "Enquire Now"}
       </button>
     </form>
   );
